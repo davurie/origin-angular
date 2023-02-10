@@ -1,1 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply font-['Varela_Round'];
+}
+
+.card {
+    @apply bg-white px-7 py-5 rounded-lg border-[1px] border-gray-200/60;
+}
+
+.card__dark {
+    @apply bg-oGray-200 border-gray-200/20;
+}
+
+.calc {
+    @apply flex items-center cursor-pointer w-fit select-none;
+}
+
+.calc--text {
+    @apply text-oBlue-600 text-xs font-bold tracking-wider transition-colors;
+}
+
+.calc--icon {
+    @apply rounded-full ml-2 bg-oBlue-600/20 text-oBlue-600 px-2 py-[0.2rem] text-xs transition-colors;
+}
+
+.calc:hover .calc--icon,
+.calc:hover .calc--text {
+    @apply text-oBlue-400;
+}
+
+.calc:hover .calc--icon {
+    @apply bg-oBlue-400/20;
+}
+
+.button {
+    @apply bg-oBlue-600 text-white rounded-full tracking-wide transition-colors;
+    @apply hover:bg-oBlue-400;
+}
+
+.button--big {
+    @apply px-9 py-4;
+}
