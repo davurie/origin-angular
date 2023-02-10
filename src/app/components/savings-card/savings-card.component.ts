@@ -4,7 +4,7 @@ import { Savings } from 'src/app/interfaces/goals';
 @Component({
   selector: 'app-savings-card',
   templateUrl: './savings-card.component.html',
-  styleUrls: ['./savings-card.component.css']
+  styleUrls: ['./savings-card.component.scss']
 })
 export class SavingsCardComponent {
 
