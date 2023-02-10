@@ -1,0 +1,30 @@
+<div class="card w-full flex justify-between items-center min-h-[8rem] shadow-sm shadow-zinc-100 select-none mb-2">
+    <div class="flex flex-grow justify-between items-center">
+        <div class="flex-[1.5] mr-0 sm:mr-20">
+            <span class="text-sm font-bold">{{goal.goalTitle}}</span>
+            <div>
+                <app-progress-bar [goalReached]="true" [targetAmount]="goal.targetAmount"
+                    [savedAmount]="goal.savedAmount"></app-progress-bar>
+                <div class="flex justify-between text-sm mt-3">
+                    <span>{{(goal.savedAmount / goal.targetAmount) | percent}}</span>
+                    <span class="font-bold rounded-full px-2 py-1 bg-oGreen/20 text-oGreen select-none">
+                        COMPLETED
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="text-left flex-1 md:mr-20 hidden sm:block">
+            <p class="text-oGray-400 text-sm tracking-wide">You've saved</p>
+            <p class="text-oGray-600 text-xl font-bold tracking-wider"> {{goal.savedAmount | currency}}</p>
+            <p class="text-oGray-400 text-sm tracking-wide">{{goal.targetAmount | currency}} target</p>
+        </div>
+        <div class="text-left flex-1 lg:mr-20 hidden md:block">
+            <p class="text-oGray-400 text-sm tracking-wide">Target completion date</p>
+            <p class="text-oGray-600 text-xl font-bold tracking-wider"> {{goal.targetDate | date: 'MM/dd/yyyy'}}</p>
+        </div>
+        <div class="text-left flex-1 hidden lg:block">
+            <p class="text-oGray-400 text-sm tracking-wide">Completion date</p>
+            <p class="text-oGray-600 text-xl font-bold tracking-wider"> {{goal.completionDate | date: 'MM/dd/yyyy'}}</p>
+        </div>
+    </div>
+</div>

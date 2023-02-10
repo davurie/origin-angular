@@ -1,5 +1,5 @@
 .savings--container {
-    @apply bg-oGray-200 h-96;
+    @apply bg-oGray-200 min-h-[24rem];
     @apply w-full px-10 py-5 2xl:px-80 2xl:py-10 xl:px-40;
 }
 

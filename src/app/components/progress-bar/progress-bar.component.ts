@@ -9,12 +9,12 @@ export class ProgressBarComponent {
 
   @Input() targetAmount: number;
   @Input() savedAmount: number;
-  @Input() completed: boolean;
+  @Input() goalReached: boolean;
 
   constructor() {
     this.targetAmount = 0;
     this.savedAmount = 0;
-    this.completed = false;
+    this.goalReached = false;
   }
 
 }

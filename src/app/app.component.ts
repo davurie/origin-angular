@@ -30,8 +30,9 @@ export class AppComponent {
           monthlyContribution: 1190.48,
           monthlyGoal: 1220.41,
           targetDate: new Date('01/01/2024'),
-          completed: false,
           onTrack: true,
+          completed: false,
+          goalReached: false,
         },
         {
           goalTitle: 'Wedding',
@@ -40,10 +41,41 @@ export class AppComponent {
           monthlyContribution: 0.00,
           monthlyGoal: 0.00,
           targetDate: new Date('04/01/2023'),
-          completed: true,
           onTrack: true,
+          completed: false,
+          goalReached: true,
         },
       ],
+      completedGoals: [
+        {
+          goalTitle: 'Office Expansion',
+          targetAmount: 150000,
+          savedAmount: 150000,
+          targetDate: new Date('08/17/2022'),
+          completionDate: new Date('08/17/2022'),
+        },
+        {
+          goalTitle: 'Buy a new Car',
+          targetAmount: 60000,
+          savedAmount: 60000,
+          targetDate: new Date('05/25/2022'),
+          completionDate: new Date('05/25/2022'),
+        },
+        {
+          goalTitle: 'Trip',
+          targetAmount: 24000,
+          savedAmount: 24000,
+          targetDate: new Date('11/04/2021'),
+          completionDate: new Date('11/04/2021'),
+        },
+        {
+          goalTitle: 'Buy a Notebook',
+          targetAmount: 2500,
+          savedAmount: 2500,
+          targetDate: new Date('04/02/2021'),
+          completionDate: new Date('04/02/2021'),
+        },
+      ]
     }
   }
 }
