@@ -1,0 +1,15 @@
+.savings-goals-card--box {
+    @apply flex;
+}
+
+.cdk-drag-preview {
+    @apply box-border rounded-md shadow-md;
+}
+
+.cdk-drag-animating {
+    @apply transition-all;
+}
+
+.savings-goals-card--placeholder {
+    @apply transition-all min-h-[9rem] border-dotted border-[3px] border-oBlue-400 mb-2 rounded-md;
+}

@@ -1,0 +1,59 @@
+<div
+    class="card w-full flex justify-between items-center min-h-[9rem] shadow-sm shadow-zinc-100 cursor-grab select-none hover:shadow-md transition">
+    <div class="flex flex-col mr-10 text-zinc-300/80">
+        <fa-icon class="-mb-[0.56rem]" [icon]="faGripVertical"></fa-icon>
+        <fa-icon class="-mb-[0.56rem]" [icon]="faGripVertical"></fa-icon>
+        <fa-icon [icon]="faGripVertical"></fa-icon>
+    </div>
+    <div class="flex flex-grow justify-between items-center flex-col col-span-2 lg:flex-row">
+        <div class="flex-[1.5] mr-20 ">
+            <span class="text-sm font-bold">{{goal.goalTitle}}</span>
+            <div>
+                <app-progress-bar [completed]="goal.completed" [targetAmount]="goal.targetAmount"
+                    [savedAmount]="goal.savedAmount"></app-progress-bar>
+                <div class="flex justify-between text-sm mt-3">
+                    <span>{{(goal.savedAmount / goal.targetAmount) | percent}}</span>
+                    <ng-template [ngIf]="goal.completed" [ngIfElse]="onTrack">
+                        <div class="calc">
+                            <span class="calc--text">Mark as complete</span>
+                            <span class="calc--icon"> > </span>
+                        </div>
+                    </ng-template>
+                    <ng-template #onTrack>
+                        <ng-template [ngIf]="goal.onTrack" [ngIfElse]="offTrack">
+                            <span class="font-bold rounded-full px-2 py-1 bg-oGreen/20 text-oGreen select-none">
+                                ON TRACK
+                            </span>
+                        </ng-template>
+                        <ng-template #offTrack>
+                            <span class="font-bold rounded-full px-2 py-1 bg-red-500/20 text-red-500 select-none">
+                                OFF TRACK
+                            </span>
+                        </ng-template>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+        <div class="text-left flex-1 mr-20">
+            <p class="text-oGray-400 text-sm tracking-wide">You've saved</p>
+            <p class="text-oGray-600 text-xl font-bold tracking-wider"> {{goal.savedAmount | currency}}</p>
+            <p class="text-oGray-400 text-sm tracking-wide">{{goal.targetAmount | currency}} target</p>
+        </div>
+        <div class="text-left flex-1 mr-20">
+            <p class="text-oGray-400 text-sm tracking-wide">Monthly Contribution</p>
+            <p class="text-oGray-600 text-xl font-bold tracking-wider"> {{goal.monthlyContribution | currency}}</p>
+            <ng-template [ngIf]="!goal.completed">
+                <p class="text-oGray-400 text-sm tracking-wide">
+                    {{(goal.monthlyContribution / goal.monthlyGoal) | percent}} of monthly savings capacity
+                </p>
+            </ng-template>
+        </div>
+        <div class="text-left flex-1 mr-20">
+            <p class="text-oGray-400 text-sm tracking-wide">Target completion date</p>
+            <p class="text-oGray-600 text-xl font-bold tracking-wider"> {{goal.targetDate | date: 'MM/dd/yyyy'}}</p>
+        </div>
+    </div>
+    <div class="mb-auto text-zinc-400 cursor-pointer rounded-full hover:text-zinc-500 transition-colors">
+        <fa-icon class="mb-auto" [icon]="faEllipsisV"></fa-icon>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+.progress-bar {
+    @apply w-full h-2 bg-gray-200/80 rounded-full;
+}
+
+.progress-bar__current {
+    @apply h-full text-center text-xs text-white bg-oBlue-400 rounded-full;
+}
+
+.progress-bar__completed {
+    @apply bg-oGreen;
+}

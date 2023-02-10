@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="mb-4">
+        <p class="text-oGray-400 leading-8">{{cardTitle}}</p>
+        <p class="text-oGray-400 text-2xl font-bold">{{savings.currentObjectiveValue | currency}}</p>
+        <div class="calc">
+            <span class="calc--text">How is this calculated?</span>
+            <span class="calc--icon"> > </span>
+        </div>
+    </div>
+    <app-progress-bar [targetAmount]="savings.currentObjectiveValue"
+        [savedAmount]="savings.currentAssigned"></app-progress-bar>
+    <div class="progress-bar mb-4">
+        <div class="progress-bar__current"
+            [ngStyle]="{'width': savings.currentAssigned | progress: savings.currentObjectiveValue}">
+        </div>
+    </div>
+    <div class="flex justify-between flex-col min-[400px]:flex-row">
+        <div class="text-left">
+            <p class="text-oBlue-400 text-xl font-bold">{{savings.currentAssigned | currency}}</p>
+            <p class="text-oBlue-400 text-sm leading-8 tracking-wide font-bold">{{assignedTitle}}</p>
+        </div>
+        <div class="text-left min-[400px]:text-right mt-2 min-[400px]:mt-0">
+            <p class="text-oGray-400 text-xl font-bold">{{savings.currentUnassigned | currency}}</p>
+            <p class="text-oGray-400 text-sm leading-8 tracking-wide font-bold">{{unnasignedTitle}}</p>
+        </div>
+    </div>
+</div>

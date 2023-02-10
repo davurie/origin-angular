@@ -1,0 +1,5 @@
+<div class="progress-bar">
+    <div class="progress-bar__current" [ngStyle]="{'width': savedAmount | progress: targetAmount}"
+        [ngClass]="completed ? 'progress-bar__completed' : ''">
+    </div>
+</div>
