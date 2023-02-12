@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CompletedGoal } from 'src/app/interfaces/goals';
+import { Goal } from 'src/app/interfaces/user';
 
 @Component({
   selector: 'app-savings-goals-completed',
@@ -8,6 +8,6 @@ import { CompletedGoal } from 'src/app/interfaces/goals';
 })
 export class SavingsGoalsCompletedComponent {
 
-  @Input() goal!: CompletedGoal;
+  @Input() goal!: Goal;
 
 }

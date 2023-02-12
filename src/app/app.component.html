@@ -2,14 +2,10 @@
 <div class="savings--container">
   <h1 class="text-2xl font-bold mb-6 text-zinc-600">Savings</h1>
 
-  <div class="cards--container">
-    <app-savings-card class="flex-1" [savings]="savingsCard.currentSavings" cardTitle="Current Savings"
-      assignedTitle="Assigned for goals" unnasignedTitle="Left to assign"></app-savings-card>
-    <app-savings-card class="flex-1" [savings]="savingsCard.monthlySavings" cardTitle="Every month you save"
-      assignedTitle="Saving for Goals" unnasignedTitle="Unassigned savings"></app-savings-card>
-  </div>
+  <app-savings-card [savings]="userViewModel.savings"></app-savings-card>
 </div>
 
 <div class="goals--container">
-  <app-savings-goals class="cards--container" [userGoals]="savingsCard"></app-savings-goals>
+  <app-savings-goals class="cards--container" [goals]="userViewModel.goals"
+    [savings]="userViewModel.savings"></app-savings-goals>
 </div>

@@ -3,10 +3,12 @@
         <h1 class="text-2xl font-bold mb-6 text-zinc-600">Goals</h1>
         <h1 class="text-sm mb-4 text-zinc-600/80 font-bold">In order of priority</h1>
         <div cdkDropList class="savings-goals-card--list" (cdkDropListDropped)="drop($event)">
-            <app-savings-goals-card cdkDrag class="savings-goals-card--box mb-2" *ngFor="let goal of userGoals.goals"
-                [goal]="goal">
-                <div class="savings-goals-card--placeholder" *cdkDragPlaceholder></div>
-            </app-savings-goals-card>
+            <div *ngFor="let goal of goals">
+                <app-savings-goals-card cdkDrag *ngIf="!goal.markedAsCompleted" class="savings-goals-card--box mb-2"
+                    [goal]="goal">
+                    <div class="savings-goals-card--placeholder" *cdkDragPlaceholder></div>
+                </app-savings-goals-card>
+            </div>
         </div>
     </div>
 
@@ -17,27 +19,27 @@
             </div>
         </div>
         <div class="flex mt-2 md:mt-0 flex-col sm:flex-row">
-            <div class="card card__dark mr-2 w-full">
+            <div class="card card__dark mr-2 w-full lg:min-w-fit">
                 <div class="text-left">
                     <p class="text-oGray-400 text-sm tracking-wide mb-1">Unassigned savings</p>
                     <p class="text-oGray-600 text-xl font-bold tracking-wider mb-1">
-                        {{userGoals.currentSavings.currentUnassigned | currency}}</p>
+                        {{savings.currentUnassigned | currency}}</p>
                     <p class="text-oGray-400 text-sm tracking-wide">
                         of
-                        <span class="font-bold"> {{ userGoals.currentSavings.currentObjectiveValue | currency}} </span>
+                        <span class="font-bold"> {{ savings.currentObjectiveValue | currency}} </span>
                         in your accounts
                     </p>
                 </div>
             </div>
-            <div class="card card__dark w-full mt-2 sm:mt-0">
+            <div class="card card__dark w-full mt-2 sm:mt-0 lg:min-w-fit">
                 <div class="text-left">
-                    <p class="text-oGray-400 text-sm tracking-wide mb-1">Unassigned savings</p>
+                    <p class="text-oGray-400 text-sm tracking-wide mb-1">Unassigned monthly income</p>
                     <p class="text-oGray-600 text-xl font-bold tracking-wider mb-1">
-                        {{userGoals.currentSavings.currentUnassigned | currency}}</p>
+                        {{savings.monthlyUnassigned | currency}}</p>
                     <p class="text-oGray-400 text-sm tracking-wide">
                         of
-                        <span class="font-bold"> {{ userGoals.currentSavings.currentObjectiveValue | currency}} </span>
-                        in your accounts
+                        <span class="font-bold"> {{ savings.monthlyObjectiveValue | currency}} </span>
+                        savings capacity
                     </p>
                 </div>
             </div>
@@ -48,7 +50,8 @@
         <h1 class="text-2xl font-bold mb-6 text-zinc-600">Goals</h1>
         <h1 class="text-sm mb-4 text-zinc-600/80 font-bold">In order of date of completion</h1>
 
-        <app-savings-goals-completed *ngFor="let goal of userGoals.completedGoals"
-            [goal]="goal"></app-savings-goals-completed>
+        <div *ngFor="let goal of goals">
+            <app-savings-goals-completed *ngIf="goal.markedAsCompleted" [goal]="goal"></app-savings-goals-completed>
+        </div>
     </div>
 </div>

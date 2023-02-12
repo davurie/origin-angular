@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { UserGoals } from 'src/app/interfaces/goals';
-import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { Goal } from 'src/app/interfaces/user';
+import { SavingsViewModel } from 'src/app/models/user.model';
 
 @Component({
   selector: 'app-savings-goals',
@@ -9,9 +10,10 @@ import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 })
 export class SavingsGoalsComponent {
 
-  @Input() userGoals!: UserGoals;
+  @Input() goals!: Goal[];
+  @Input() savings!: SavingsViewModel;
 
   drop(event: CdkDragDrop<string[]>) {
-    moveItemInArray(this.userGoals.goals, event.previousIndex, event.currentIndex);
+    moveItemInArray(this.goals, event.previousIndex, event.currentIndex);
   }
 }

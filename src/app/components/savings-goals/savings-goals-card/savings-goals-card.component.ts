@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { faGripVertical, faEllipsisV } from '@fortawesome/free-solid-svg-icons';
-import { Goal } from 'src/app/interfaces/goals';
+import { Goal } from 'src/app/interfaces/user';
 
 @Component({
   selector: 'app-savings-goals-card',
