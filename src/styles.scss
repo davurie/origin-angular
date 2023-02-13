@@ -75,7 +75,7 @@ body {
 }
 
 .mat-drawer-backdrop.mat-drawer-shown {
-    @apply bg-slate-700/30 backdrop-blur-sm;
+    @apply bg-slate-900/60;
 }
 
 .mat-drawer:not(.mat-drawer-side) {

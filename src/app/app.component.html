@@ -11,8 +11,8 @@
       [savings]="userViewModel.savings"></app-savings-goals>
   </div>
 
-  <mat-sidenav #drawer class="w-full md:w-2/3 lg:w-1/3 xl:w-1/4 h-full rounded-l-xl" mode="over" position="end" disableClose fixedInViewport
-    [fixedTopGap]="1" [fixedBottomGap]="1" opened>
+  <mat-sidenav #drawer class="w-full md:w-2/3 lg:w-1/3 xl:w-1/4 h-full rounded-l-xl" mode="over" position="end"
+    disableClose fixedInViewport opened>
     <ng-container *ngIf="getSidenavSlot() === 'currentSavingsDrawer'">
       currentSavingsDrawer
     </ng-container>
