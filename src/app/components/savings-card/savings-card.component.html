@@ -3,8 +3,8 @@
         <div class="mb-4">
             <p class="text-oGray-400 leading-8">Current Savings</p>
             <p class="text-oGray-400 text-2xl font-bold">{{savings.currentObjectiveValue | currency}}</p>
-            <div class="calc">
-                <span class="calc--text" >How is this calculated?</span>
+            <div class="calc" (click)="toggleRightSidenav('currentSavingsDrawer')">
+                <span class="calc--text">How is this calculated?</span>
                 <span class="calc--icon"> > </span>
             </div>
         </div>
@@ -31,7 +31,7 @@
         <div class="mb-4">
             <p class="text-oGray-400 leading-8">Every month you save</p>
             <p class="text-oGray-400 text-2xl font-bold">{{savings.monthlyObjectiveValue | currency}}</p>
-            <div class="calc">
+            <div class="calc" (click)="toggleRightSidenav('monthlyObjectiveValue')">
                 <span class="calc--text">How is this calculated?</span>
                 <span class="calc--icon"> > </span>
             </div>

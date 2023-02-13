@@ -1,20 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
+
 import { User } from './interfaces/user';
 import { UserViewModel } from './models/user.model';
+import { SidenavService } from './services/sidenav.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
+
+  @ViewChild('drawer') public sidenav!: MatSidenav;
 
   user: User
   userViewModel: UserViewModel;
 
-  hasBackDrop: boolean = true;
-
-  constructor() {
+  constructor(private sidenavService: SidenavService) {
     this.user = {
       id: 1,
       name: 'Jill',
@@ -98,4 +101,11 @@ export class AppComponent {
 
     this.userViewModel = new UserViewModel(this.user);
   }
+
+  getSidenavSlot = () => this.sidenavService.getSlot();
+
+  ngAfterViewInit() {
+    this.sidenavService.setSidenav(this.sidenav);
+  }
+
 }

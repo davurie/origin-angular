@@ -73,3 +73,11 @@ body {
 .complete--icon__no {
     @apply cursor-pointer rounded-full ml-2 bg-red-600/20 text-red-600 px-[0.44rem] py-[0.2rem] text-xs transition-colors hover:bg-red-400/20;
 }
+
+.mat-drawer-backdrop.mat-drawer-shown {
+    @apply bg-slate-700/30 backdrop-blur-sm;
+}
+
+.mat-drawer:not(.mat-drawer-side) {
+    @apply shadow-sm;
+}
