@@ -6,7 +6,7 @@ export class UserViewModel {
     savings: SavingsViewModel;
 
     constructor(user: User) {
-        this.name = user.name;
+        this.name = user.fullname;
         this.goals = user.savings.goals;
         this.savings = new SavingsViewModel(user.savings)
     }
