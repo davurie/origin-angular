@@ -6,11 +6,11 @@ body {
     @apply font-['Varela_Round'];
 }
 
-.card {
+.goals--card {
     @apply bg-white px-7 py-5 rounded-lg border-[1px] border-gray-200/60;
 }
 
-.card__dark {
+.goals--card__dark {
     @apply bg-oGray-200 border-gray-200/20;
 }
 
