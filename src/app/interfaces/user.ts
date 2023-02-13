@@ -1,9 +1,12 @@
 export interface User {
-    name: string;
+    id: number;
+    password: string;
+    fullname: string;
     savings: Savings;
 }
 
 export interface Savings {
+    userId: number;
     lastIncome: number;
     investmentIncomeRatio: number;
     accounts: Account[];
@@ -11,6 +14,8 @@ export interface Savings {
 }
 
 export interface Goal {
+    id: number;
+    userId: number;
     goalTitle: string;
     targetAmount: number;
     savedAmount: number;
@@ -24,6 +29,8 @@ export interface Goal {
 }
 
 export interface Account {
+    id: number;
+    userId: number;
     bank?: string;
     type: string;
     balance: number;

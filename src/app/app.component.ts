@@ -23,12 +23,16 @@ export class AppComponent implements AfterViewInit {
 
   constructor(private sidenavService: SidenavService) {
     this.user = {
-      name: 'Jill',
+      id: 1,
+      password: '123',
+      fullname: 'Jill',
       savings: {
+        userId: 1,
         lastIncome: 6102.05,
         investmentIncomeRatio: 0.2,
         goals: [
           {
+            id: 1,
             goalTitle: 'Buy a House',
             targetAmount: 80000.00,
             savedAmount: 56190.48,
@@ -38,8 +42,10 @@ export class AppComponent implements AfterViewInit {
             onTrack: true,
             markedAsCompleted: false,
             goalReached: false,
+            userId: 1,
           },
           {
+            id: 2,
             goalTitle: 'Wedding',
             targetAmount: 20000.00,
             savedAmount: 20000.00,
@@ -49,8 +55,10 @@ export class AppComponent implements AfterViewInit {
             onTrack: true,
             markedAsCompleted: false,
             goalReached: true,
+            userId: 1,
           },
           {
+            id: 3,
             goalTitle: 'Office Expansion',
             targetAmount: 150000,
             savedAmount: 150000,
@@ -61,8 +69,10 @@ export class AppComponent implements AfterViewInit {
             onTrack: true,
             markedAsCompleted: true,
             goalReached: true,
+            userId: 1,
           },
           {
+            id: 4,
             goalTitle: 'Buy a new Car',
             targetAmount: 60000,
             savedAmount: 60000,
@@ -73,8 +83,10 @@ export class AppComponent implements AfterViewInit {
             onTrack: true,
             markedAsCompleted: true,
             goalReached: true,
+            userId: 1,
           },
           {
+            id: 5,
             goalTitle: 'Trip',
             targetAmount: 24000,
             savedAmount: 24000,
@@ -85,8 +97,10 @@ export class AppComponent implements AfterViewInit {
             onTrack: true,
             markedAsCompleted: true,
             goalReached: true,
+            userId: 1,
           },
           {
+            id: 6,
             goalTitle: 'Buy a Notebook',
             targetAmount: 2500,
             savedAmount: 2500,
@@ -97,69 +111,96 @@ export class AppComponent implements AfterViewInit {
             onTrack: true,
             markedAsCompleted: true,
             goalReached: true,
+            userId: 1,
           },
         ],
         accounts: [
           {
+            id: 1,
+            userId: 1,
             balance: 43200,
             bank: "Chase",
             type: "Plaid Money Market (4444)"
           },
           {
+            id: 2,
+            userId: 1,
             balance: 23631.98,
             bank: "Vanguard",
             type: "Plaid 401k (6666)"
           },
           {
+            id: 3,
+            userId: 1,
             balance: 12748.99,
             bank: "Origin",
             type: "Origin Account (5681)"
           },
           {
+            id: 4,
+            userId: 1,
             balance: 320.76,
             bank: "Vanguard",
             type: "Plaid IRA (5555)"
           },
           {
+            id: 5,
+            userId: 1,
             balance: 210,
             bank: "Chase",
             type: "Plaid Saving (1111)"
           },
           {
+            id: 6,
+            userId: 1,
             balance: 210,
             type: "Plaid Saving"
           },
           {
+            id: 7,
+            userId: 1,
             balance: 210,
             bank: "Wells Fargo",
             type: "Plaid Saving (1111)"
           },
           {
+            id: 8,
+            userId: 1,
             balance: 110,
             bank: "Chase",
             type: "Plaid Checking (0000)"
           },
           {
+            id: 9,
+            userId: 1,
             balance: 110,
             bank: "Chase",
             type: "Plaid Checking (0000)"
           },
           {
+            id: 10,
+            userId: 1,
             balance: 110,
             bank: "Chase",
             type: "Plaid Checking (0000)"
           },
           {
+            id: 11,
+            userId: 1,
             balance: 110,
             bank: "Chase",
             type: "Plaid Checking (0000)"
           },
           {
+            id: 12,
+            userId: 1,
             balance: 110,
             bank: "Chase",
             type: "Plaid Checking (0000)"
           },
           {
+            id: 13,
+            userId: 1,
             balance: 110,
             bank: "Wells Fargo",
             type: "Plaid Checking (0000)"
