@@ -1,4 +1,4 @@
-import { Component, Input, ViewChild } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Goal } from 'src/app/interfaces/user';
 import { SavingsViewModel } from 'src/app/models/user.model';

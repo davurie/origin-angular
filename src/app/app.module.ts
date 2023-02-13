@@ -15,6 +15,7 @@ import { SavingsGoalsComponent } from './components/savings-goals/savings-goals.
 import { SavingsGoalsCompletedComponent } from './components/savings-goals/savings-goals-completed/savings-goals-completed.component';
 
 import { SidenavService } from './services/sidenav.service';
+import { SavingsCurrentSidenavComponent } from './components/savings-card/savings-current-sidenav/savings-current-sidenav.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SidenavService } from './services/sidenav.service';
     SavingsGoalsComponent,
     SavingsGoalsCardComponent,
     SavingsGoalsCompletedComponent,
+    SavingsCurrentSidenavComponent,
   ],
   imports: [
     BrowserModule,

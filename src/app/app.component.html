@@ -11,14 +11,29 @@
       [savings]="userViewModel.savings"></app-savings-goals>
   </div>
 
-  <mat-sidenav #drawer class="w-full md:w-2/3 lg:w-1/3 xl:w-1/4 h-full rounded-l-xl" mode="over" position="end"
-    disableClose fixedInViewport opened>
-    <ng-container *ngIf="getSidenavSlot() === 'currentSavingsDrawer'">
-      currentSavingsDrawer
-    </ng-container>
-    <ng-container *ngIf="getSidenavSlot() === 'monthlyObjectiveValue'">
-      monthlyObjectiveValue
-    </ng-container>
+  <mat-sidenav #drawer class="w-full md:w-[30rem] rounded-l-xl" mode="over" position="end" disableClose fixedInViewport>
+
+    <div class="px-6 py-4 select-none">
+      <div class="flex justify-end text-oGray-400">
+
+        <span (click)="closeSidenav()">
+          <fa-icon class="flex items-center px-2 py-1 rounded-full cursor-pointer hover:bg-oGray-400/40" size="xl"
+            [icon]="faXmark">
+          </fa-icon>
+        </span>
+      </div>
+      <div class="w-full px-0 py-4 md:px-4 md:py-8">
+        <ng-container *ngIf="getSidenavSlot() === 'currentSavingsDrawer'">
+          <app-savings-current-sidenav [accounts]="userViewModel.savings.accounts"
+            [currentObjectiveValue]="userViewModel.savings.currentObjectiveValue">
+          </app-savings-current-sidenav>
+        </ng-container>
+        <ng-container *ngIf="getSidenavSlot() === 'monthlyObjectiveValue'">
+          monthlyObjectiveValue
+        </ng-container>
+      </div>
+    </div>
+
   </mat-sidenav>
 
 </mat-sidenav-container>

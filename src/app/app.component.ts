@@ -1,5 +1,7 @@
 import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
+
 
 import { User } from './interfaces/user';
 import { UserViewModel } from './models/user.model';
@@ -13,6 +15,8 @@ import { SidenavService } from './services/sidenav.service';
 export class AppComponent implements AfterViewInit {
 
   @ViewChild('drawer') public sidenav!: MatSidenav;
+
+  faXmark = faXmark;
 
   user: User
   userViewModel: UserViewModel;
@@ -168,6 +172,8 @@ export class AppComponent implements AfterViewInit {
   }
 
   getSidenavSlot = () => this.sidenavService.getSlot();
+
+  closeSidenav = () => this.sidenavService.close();
 
   ngAfterViewInit() {
     this.sidenavService.setSidenav(this.sidenav);

@@ -10,12 +10,7 @@
         </div>
         <app-progress-bar [targetAmount]="savings.currentObjectiveValue"
             [savedAmount]="savings.currentAssigned"></app-progress-bar>
-        <div class="progress-bar mb-4">
-            <div class="progress-bar__current"
-                [ngStyle]="{'width': savings.currentAssigned | progress: savings.currentObjectiveValue}">
-            </div>
-        </div>
-        <div class="flex justify-between flex-col min-[400px]:flex-row">
+        <div class="flex justify-between flex-col min-[400px]:flex-row mt-4">
             <div class="text-left">
                 <p class="text-oBlue-400 text-xl font-bold">{{savings.currentAssigned | currency}}</p>
                 <p class="text-oBlue-400 text-sm leading-8 tracking-wide font-bold">Assigned for goals</p>
@@ -37,13 +32,8 @@
             </div>
         </div>
         <app-progress-bar [targetAmount]="savings.monthlyObjectiveValue"
-            [savedAmount]="savings.currentAssigned"></app-progress-bar>
-        <div class="progress-bar mb-4">
-            <div class="progress-bar__current"
-                [ngStyle]="{'width': savings.currentAssigned | progress: savings.monthlyObjectiveValue}">
-            </div>
-        </div>
-        <div class="flex justify-between flex-col min-[400px]:flex-row">
+            [savedAmount]="savings.monthlyAssigned"></app-progress-bar>
+        <div class="flex justify-between flex-col min-[400px]:flex-row mt-4">
             <div class="text-left">
                 <p class="text-oBlue-400 text-xl font-bold">{{savings.monthlyAssigned | currency}}</p>
                 <p class="text-oBlue-400 text-sm leading-8 tracking-wide font-bold">Saving for Goals</p>
