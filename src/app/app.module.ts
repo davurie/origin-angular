@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -33,7 +34,8 @@ import { SavingsCurrentSidenavComponent } from './components/savings-card/saving
     BrowserAnimationsModule,
     FontAwesomeModule,
     DragDropModule,
-    MatSidenavModule
+    MatSidenavModule,
+    HttpClientModule
   ],
   providers: [SidenavService],
   bootstrap: [AppComponent]

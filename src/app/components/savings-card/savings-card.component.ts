@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { SavingsViewModel } from 'src/app/models/user.model';
+import { SavingsViewModel } from 'src/app/models/savings.model';
 import { SidenavService } from 'src/app/services/sidenav.service';
 
 @Component({
