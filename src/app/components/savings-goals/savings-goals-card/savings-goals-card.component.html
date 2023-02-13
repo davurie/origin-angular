@@ -11,13 +11,26 @@
             <div>
                 <app-progress-bar [goalReached]="goal.goalReached" [targetAmount]="goal.targetAmount"
                     [savedAmount]="goal.savedAmount"></app-progress-bar>
-                <div class="flex justify-between text-sm mt-3">
+                <div class="flex justify-between text-sm mt-3 min-h-[1.75rem] items-center">
                     <span>{{(goal.savedAmount / goal.targetAmount) | percent}}</span>
                     <ng-template [ngIf]="goal.goalReached" [ngIfElse]="onTrack">
-                        <div class="calc">
-                            <span class="calc--text">Mark as complete</span>
-                            <span class="calc--icon hidden sm:block"> > </span>
-                        </div>
+                        <ng-template [ngIf]="!showMarkAsComplete">
+                            <div class="calc" (click)="toggleViewMarkAsComplete()">
+                                <span class="calc--text">Mark as complete</span>
+                                <span class="calc--icon hidden sm:block"> > </span>
+                            </div>
+                        </ng-template>
+                        <ng-template [ngIf]="showMarkAsComplete">
+                            <div class="complete">
+                                <span class="complete--text">Are you sure?</span>
+                                <span class="complete--icon__yes" (click)="handleMarkAsComplete()">
+                                    <fa-icon [icon]="faCheck"></fa-icon>
+                                </span>
+                                <span class="complete--icon__no" (click)="toggleViewMarkAsComplete()">
+                                    <fa-icon [icon]="faXmark"></fa-icon>
+                                </span>
+                            </div>
+                        </ng-template>
                     </ng-template>
                     <ng-template #onTrack>
                         <ng-template [ngIf]="goal.onTrack" [ngIfElse]="offTrack">
@@ -53,7 +66,8 @@
             <p class="text-oGray-600 text-xl font-bold tracking-wider"> {{goal.targetDate | date: 'MM/dd/yyyy'}}</p>
         </div>
     </div>
-    <div class="mb-auto text-zinc-400 cursor-pointer rounded-full hover:text-zinc-500 transition-colors">
+    <div
+        class="text-zinc-400 py-1 hover:text-zinc-500 flex justify-center w-5 mb-auto cursor-pointer rounded-full transition-colors hover:bg-zinc-400/20">
         <fa-icon class="mb-auto" [icon]="faEllipsisV"></fa-icon>
     </div>
 </div>

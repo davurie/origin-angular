@@ -57,3 +57,19 @@ body {
 .goals--container {
     @apply w-full px-10 py-5 2xl:px-80 2xl:py-8 xl:px-40;
 }
+
+.complete {
+    @apply flex items-center w-fit select-none;
+}
+
+.complete--text {
+    @apply text-oBlue-600 text-xs font-bold tracking-wider transition-colors;
+}
+
+.complete--icon__yes {
+    @apply cursor-pointer rounded-full ml-2 bg-green-600/20 text-green-600 px-[0.32rem] py-[0.2rem] text-xs transition-colors hover:bg-green-400/20;
+}
+
+.complete--icon__no {
+    @apply cursor-pointer rounded-full ml-2 bg-red-600/20 text-red-600 px-[0.44rem] py-[0.2rem] text-xs transition-colors hover:bg-red-400/20;
+}

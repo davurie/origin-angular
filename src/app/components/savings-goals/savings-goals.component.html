@@ -4,10 +4,12 @@
         <h1 class="text-sm mb-4 text-zinc-600/80 font-bold">In order of priority</h1>
         <div cdkDropList class="savings-goals-card--list" (cdkDropListDropped)="drop($event)">
             <div *ngFor="let goal of goals">
-                <app-savings-goals-card cdkDrag *ngIf="!goal.markedAsCompleted" class="savings-goals-card--box mb-2"
-                    [goal]="goal">
-                    <div class="savings-goals-card--placeholder" *cdkDragPlaceholder></div>
-                </app-savings-goals-card>
+                <div cdkDrag>
+                    <app-savings-goals-card *ngIf="!goal.markedAsCompleted" class="savings-goals-card--box mb-2"
+                        [goal]="goal">
+                        <div class="savings-goals-card--placeholder" *cdkDragPlaceholder></div>
+                    </app-savings-goals-card>
+                </div>
             </div>
         </div>
     </div>

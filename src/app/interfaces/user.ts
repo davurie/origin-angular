@@ -6,7 +6,8 @@ export interface User {
 
 export interface Savings {
     currentObjectiveValue: number;
-    monthlyObjectiveValue: number;    
+    monthlyObjectiveValue: number;
+    accounts?: Account[];
     goals: Goal[];
 }
 
@@ -21,4 +22,10 @@ export interface Goal {
     onTrack: boolean;
     goalReached: boolean;
     markedAsCompleted: boolean;
+}
+
+export interface Account {
+    bank: string;
+    type: string;
+    balance: number;
 }
