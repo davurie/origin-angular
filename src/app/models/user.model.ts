@@ -1,13 +1,11 @@
-import { Goal, User, Savings } from "../interfaces/user";
+import { Goal, User, Savings, Account } from "../interfaces/user";
 
 export class UserViewModel {
-    id: number;
     name: string;
     goals: Goal[];
     savings: SavingsViewModel;
 
     constructor(user: User) {
-        this.id = user.id;
         this.name = user.name;
         this.goals = user.savings.goals;
         this.savings = new SavingsViewModel(user.savings)
@@ -18,18 +16,22 @@ export class SavingsViewModel {
     currentObjectiveValue: number;
     monthlyObjectiveValue: number;
     currentAssigned: number;
-    currentUnassigned: number;
     monthlyAssigned: number;
+    currentUnassigned: number;
     monthlyUnassigned: number;
+    accounts: Account[];
 
     constructor(savings: Savings) {
-        this.currentObjectiveValue = savings.currentObjectiveValue;
-        this.monthlyObjectiveValue = savings.monthlyObjectiveValue;
+        this.currentObjectiveValue = this.getObjectiveValue(savings.accounts);
+        this.monthlyObjectiveValue = savings.lastIncome * savings.investmentIncomeRatio;
         this.currentAssigned = this.getCurrentAssigned(savings.goals);
-        this.currentUnassigned = this.getCurrentUnassigned(savings.currentObjectiveValue, savings.goals);
         this.monthlyAssigned = this.getMonthlyAssigned(savings.goals);
-        this.monthlyUnassigned = this.getMonthlyUnassigned(savings.monthlyObjectiveValue, savings.goals);
+        this.currentUnassigned = this.getCurrentUnassigned(this.currentObjectiveValue, savings.goals);
+        this.monthlyUnassigned = this.getMonthlyUnassigned(this.monthlyObjectiveValue, savings.goals);
+        this.accounts = savings.accounts;
     }
+
+    getObjectiveValue = (accounts: Account[]) => accounts.reduce((sum, account) => sum + account.balance, 0);
 
     getCurrentAssigned = (goals: Goal[]) =>
         goals.reduce((sum, goal) => goal.markedAsCompleted ? sum : sum + goal.savedAmount, 0);

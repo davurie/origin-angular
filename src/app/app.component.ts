@@ -19,11 +19,10 @@ export class AppComponent implements AfterViewInit {
 
   constructor(private sidenavService: SidenavService) {
     this.user = {
-      id: 1,
       name: 'Jill',
       savings: {
-        currentObjectiveValue: 81191.73,
-        monthlyObjectiveValue: 1220.41,
+        lastIncome: 6102.05,
+        investmentIncomeRatio: 0.2,
         goals: [
           {
             goalTitle: 'Buy a House',
@@ -95,6 +94,72 @@ export class AppComponent implements AfterViewInit {
             markedAsCompleted: true,
             goalReached: true,
           },
+        ],
+        accounts: [
+          {
+            balance: 43200,
+            bank: "Chase",
+            type: "Plaid Money Market (4444)"
+          },
+          {
+            balance: 23631.98,
+            bank: "Vanguard",
+            type: "Plaid 401k (6666)"
+          },
+          {
+            balance: 12748.99,
+            bank: "Origin",
+            type: "Origin Account (5681)"
+          },
+          {
+            balance: 320.76,
+            bank: "Vanguard",
+            type: "Plaid IRA (5555)"
+          },
+          {
+            balance: 210,
+            bank: "Chase",
+            type: "Plaid Saving (1111)"
+          },
+          {
+            balance: 210,
+            type: "Plaid Saving"
+          },
+          {
+            balance: 210,
+            bank: "Wells Fargo",
+            type: "Plaid Saving (1111)"
+          },
+          {
+            balance: 110,
+            bank: "Chase",
+            type: "Plaid Checking (0000)"
+          },
+          {
+            balance: 110,
+            bank: "Chase",
+            type: "Plaid Checking (0000)"
+          },
+          {
+            balance: 110,
+            bank: "Chase",
+            type: "Plaid Checking (0000)"
+          },
+          {
+            balance: 110,
+            bank: "Chase",
+            type: "Plaid Checking (0000)"
+          },
+          {
+            balance: 110,
+            bank: "Chase",
+            type: "Plaid Checking (0000)"
+          },
+          {
+            balance: 110,
+            bank: "Wells Fargo",
+            type: "Plaid Checking (0000)"
+          }
         ]
       }
     }

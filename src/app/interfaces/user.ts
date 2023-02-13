@@ -1,13 +1,12 @@
 export interface User {
-    id: number;
     name: string;
     savings: Savings;
 }
 
 export interface Savings {
-    currentObjectiveValue: number;
-    monthlyObjectiveValue: number;
-    accounts?: Account[];
+    lastIncome: number;
+    investmentIncomeRatio: number;
+    accounts: Account[];
     goals: Goal[];
 }
 
@@ -25,7 +24,7 @@ export interface Goal {
 }
 
 export interface Account {
-    bank: string;
+    bank?: string;
     type: string;
     balance: number;
 }
