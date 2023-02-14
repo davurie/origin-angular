@@ -28,7 +28,7 @@ export class SavingsGoalsCardComponent {
   handleMarkAsComplete = () => this.goalService.markGoalAsComplete(this.goal).subscribe(
     {
       error: (e) => console.error(e),
-      complete: () => this.userState.getPosts() //This is ugly but its cool
+      complete: () => this.userState.getPosts()
     }
   );
 
