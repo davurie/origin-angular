@@ -100,90 +100,104 @@
       "userId": 1,
       "balance": 43200,
       "bank": "Chase",
-      "type": "Plaid Money Market (4444)"
+      "type": "Money Market",
+      "lastDigits": "4444"
     },
     {
       "id": 2,
       "userId": 1,
       "balance": 23631.98,
       "bank": "Vanguard",
-      "type": "Plaid 401k (6666)"
+      "type": "401k",
+      "lastDigits": "6666"
     },
     {
       "id": 3,
       "userId": 1,
       "balance": 12748.99,
       "bank": "Origin",
-      "type": "Origin Account (5681)"
+      "type": "Origin Account",
+      "lastDigits": "5681"
     },
     {
       "id": 4,
       "userId": 1,
       "balance": 320.76,
       "bank": "Vanguard",
-      "type": "Plaid IRA (5555)"
+      "type": "IRA",
+      "lastDigits": "5555"
     },
     {
       "id": 5,
       "userId": 1,
       "balance": 210,
       "bank": "Chase",
-      "type": "Plaid Saving (1111)"
+      "type": "Saving",
+      "lastDigits": "1111"
     },
     {
       "id": 6,
       "userId": 1,
       "balance": 210,
-      "type": "Plaid Saving"
+      "bank": "Origin",
+      "type": "Origin Account",
+      "lastDigits": "6895"
     },
     {
       "id": 7,
       "userId": 1,
       "balance": 210,
       "bank": "Wells Fargo",
-      "type": "Plaid Saving (1111)"
+      "type": "Saving",
+      "lastDigits": "1111"
     },
     {
       "id": 8,
       "userId": 1,
-      "balance": 110,
+      "balance": 954,
       "bank": "Chase",
-      "type": "Plaid Checking (0000)"
+      "type": "Checking",
+      "lastDigits": "6458"
     },
     {
       "id": 9,
       "userId": 1,
-      "balance": 110,
+      "balance": 4345,
       "bank": "Chase",
-      "type": "Plaid Checking (0000)"
+      "type": "Checking",
+      "lastDigits": "2368"
     },
     {
       "id": 10,
       "userId": 1,
-      "balance": 110,
+      "balance": 1235,
       "bank": "Chase",
-      "type": "Plaid Checking (0000)"
+      "type": "Checking",
+      "lastDigits": "7862"
     },
     {
       "id": 11,
       "userId": 1,
-      "balance": 110,
+      "balance": 7563,
       "bank": "Chase",
-      "type": "Plaid Checking (0000)"
+      "type": "Checking",
+      "lastDigits": "3535"
     },
     {
       "id": 12,
       "userId": 1,
-      "balance": 110,
+      "balance": 3542,
       "bank": "Chase",
-      "type": "Plaid Checking (0000)"
+      "type": "Checking",
+      "lastDigits": "6575"
     },
     {
       "id": 13,
       "userId": 1,
-      "balance": 110,
+      "balance": 4652,
       "bank": "Wells Fargo",
-      "type": "Plaid Checking (0000)"
+      "type": "Checking",
+      "lastDigits": "2568"
     }
   ]
 }

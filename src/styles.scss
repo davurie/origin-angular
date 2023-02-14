@@ -36,22 +36,23 @@ body {
 }
 
 .button {
-    @apply bg-oBlue-600 text-white rounded-full tracking-wide transition-colors;
-    @apply hover:bg-oBlue-400;
+    @apply bg-oBlue-600 text-white rounded-full tracking-wide transition-colors hover:bg-oBlue-400 disabled:bg-oGray-600 disabled:cursor-not-allowed;
 }
 
 .button--big {
     @apply px-9 py-4;
 }
 
+.button--transparent {
+    @apply  bg-[transparent] text-oBlue-600 hover:text-oBlue-400 hover:bg-oBlue-400/20;
+}
+
 .savings--container {
-    @apply bg-oGray-200 min-h-[24rem];
-    @apply w-full px-10 py-5 2xl:px-80 2xl:py-10 xl:px-40;
+    @apply bg-oGray-200 min-h-[24rem] w-full px-10 py-5 2xl:px-80 2xl:py-10 xl:px-40;
 }
 
 .cards--container {
-    @apply flex justify-between flex-col md:flex-row;
-    @apply w-full space-y-4 md:space-y-0 md:space-x-4;
+    @apply flex justify-between flex-col md:flex-row w-full space-y-4 md:space-y-0 md:space-x-4;
 }
 
 .goals--container {
@@ -80,4 +81,16 @@ body {
 
 .mat-drawer:not(.mat-drawer-side) {
     @apply shadow-sm;
+}
+
+.input {
+    @apply mt-2 mb-4 pl-2 h-10 rounded-md border-oGray-400/20 border-[1px] outline-none transition focus:border-oBlue-400/20 focus:ring-1 invalid:border-red-600;
+}
+
+.label {
+    @apply text-sm text-oGray-600;
+}
+
+.select {
+    @apply mt-2 mb-4 pl-2 h-10 rounded-md border-oGray-400/20 border-[1px] outline-none transition focus:border-oBlue-400/20 focus:ring-1 invalid:border-red-600;
 }

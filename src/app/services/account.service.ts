@@ -13,5 +13,9 @@ export class AccountService {
 
   constructor(private http: HttpClient) { }
 
-  findAccountsByUserId = (id: number): Observable<Account[]> => this.http.get<Account[]>(`http://localhost:3000/accounts/?userId=${id}`);
+  findAccountsByUserId = (id: number): Observable<Account[]> =>
+    this.http.get<Account[]>(`http://localhost:3000/accounts/?userId=${id}`);
+
+  addAcount = (account: Account): Observable<Account> =>
+    this.http.post<Account>(`http://localhost:3000/accounts`, account);
 }

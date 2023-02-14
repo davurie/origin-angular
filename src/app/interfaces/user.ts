@@ -8,7 +8,8 @@ export interface User {
 export interface Savings {
     userId: number;
     lastIncome: number;
-    investmentIncomeRatio: number;
+    fixedExpenses?: FixedExpenses[];
+    investmentIncomeRatio: number; //remove after implementing fixed expenses
 }
 
 export interface Goal {
@@ -29,7 +30,13 @@ export interface Goal {
 export interface Account {
     id?: number;
     bank?: string;
-    userId: number;
+    lastDigits: string;
     type: string;
     balance: number;
+    userId: number;
+}
+
+export interface FixedExpenses {
+    name: string;
+    value: number;
 }

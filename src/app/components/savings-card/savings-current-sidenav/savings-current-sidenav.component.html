@@ -1,13 +1,14 @@
 <div class="flex items-baseline">
-    <h1 class="text-2xl font-bold text-oGray-600 mr-1 mb-6">Current Savings</h1>
-    <fa-icon class="text-oGray-600" [icon]="faInfoCircle"></fa-icon>
-  </div>
+  <h1 class="text-2xl font-bold text-oGray-600 mr-1 mb-6">Current Savings</h1>
+  <fa-icon class="text-oGray-600" [icon]="faInfoCircle"></fa-icon>
+</div>
+<div *ngIf="!showAddAccountForm">
   <div class="mb-8">
-    <div class="flex justify-between mb-2 text-xs md:text-sm text-oGray-400 font-bold"
-      *ngFor="let account of accounts">
+    <div class="flex justify-between mb-2 text-xs md:text-sm text-oGray-400 font-bold" *ngFor="let account of accounts">
       <div class="">
         <span *ngIf="account.bank">{{account.bank}} - </span>
         <span>{{account.type}}</span>
+        <span *ngIf="account.lastDigits"> ({{account.lastDigits}})</span>
       </div>
       <span class="tabular-nums">{{account.balance | currency}}</span>
     </div>
@@ -19,11 +20,12 @@
     </span>
   </div>
   <div class="flex justify-end mb-16">
-    <div class="calc">
+    <div class="calc" (click)="toggleAddAccountForm()">
       <span class="calc--text">Connect new account</span>
       <span class="calc--icon"> > </span>
     </div>
   </div>
+
   <div class="flex justify-center">
     <div class="px-8 py-1 w-full md:w-auto">
       <button class="button button--big min-w-[260px] w-full md:w-auto h-20 md:h-auto" (click)="closeSidenav()">
@@ -31,3 +33,46 @@
       </button>
     </div>
   </div>
+</div>
+
+<form #accountForm="ngForm" *ngIf="showAddAccountForm" class="w-full bg-oGray-200 rounded-lg p-4"
+  (ngSubmit)="handleSaveNewAccount()">
+  <div>
+    <label for="bank_name" class="label">Bank</label>
+    <input required [(ngModel)]="newAccountModel.bank" name="bank_name" type="text" class="input w-full ">
+
+    <label for="account_type" class="label">Account Type</label>
+    <select required [(ngModel)]="newAccountModel.type" name="account_type" class="select block w-full">
+      <option value="" selected disabled hidden>Choose here</option>
+      <option *ngFor="let type of accountTypes" [value]="type">{{type}}</option>
+    </select>
+    <div class="flex">
+      <div>
+        <label for="account_number" class="label">Account #</label>
+        <div class="flex relative items-center">
+          <input required [(ngModel)]="newAccountModel.lastDigits" name="account_number" type="text" class="input w-28"
+            maxlength="4" minlength="4" (ngModelChange)="fakeBankBalance.next()">
+          <span class="absolute right-0 pr-2 mb-2 text-xs"> {{newAccountModel.lastDigits.length}} / 4</span>
+        </div>
+      </div>
+      <div class="pl-6">
+        <label class="label">Balance</label>
+        <div class="flex mt-2 mb-4 h-10 w-full items-center">
+          <span *ngIf="!loadingBalance"> {{newAccountModel.balance | currency}}</span>
+          <span *ngIf="loadingBalance"> Loading Balance</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col-reverse sm:flex-row justify-around py-1 w-full md:w-auto">
+    <button class="button button--big button--transparent w-full sm:w-[60px] md:w-auto h-20 md:h-auto"
+      (click)="toggleAddAccountForm()">
+      Cancel
+    </button>
+    <button class="button button--big w-full sm:w-[200px] md:w-auto h-20 md:h-auto" type="submit"
+      [disabled]="!accountForm.form.valid">
+      Add Account
+    </button>
+  </div>
+</form>
