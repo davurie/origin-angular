@@ -12,6 +12,7 @@ import { UserState } from 'src/app/states/user.state';
 export class SavingsGoalsCardComponent {
 
   @Input() goal!: Goal;
+  @Input() monthlyCapacity!: number;
 
   showMarkAsComplete: boolean;
 

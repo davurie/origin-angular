@@ -57,7 +57,7 @@
             <p class="text-oGray-600 text-xl font-bold tracking-wider"> {{goal.monthlyContribution | currency}}</p>
             <ng-template [ngIf]="!goal.goalReached">
                 <p class="text-oGray-400 text-sm tracking-wide">
-                    {{(goal.monthlyContribution / goal.monthlyGoal) | percent}} of monthly savings capacity
+                    {{(goal.monthlyContribution / monthlyCapacity) | percent}} of monthly savings capacity
                 </p>
             </ng-template>
         </div>

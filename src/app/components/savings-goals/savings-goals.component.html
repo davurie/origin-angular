@@ -6,7 +6,7 @@
             <div *ngFor="let goal of goals">
                 <div cdkDrag>
                     <app-savings-goals-card *ngIf="!goal.markedAsCompleted" class="savings-goals-card--box mb-2"
-                        [goal]="goal">
+                        [goal]="goal" [monthlyCapacity]="savings.monthlyObjectiveValue">
                         <div class="savings-goals-card--placeholder" *cdkDragPlaceholder></div>
                     </app-savings-goals-card>
                 </div>
