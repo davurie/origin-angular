@@ -12,9 +12,9 @@ import { UserService } from '../services/user.service';
 })
 export class UserState {
 
-    user$!: Observable<User>;
-    goal$!: Observable<Goal[]>;
-    account$!: Observable<Account[]>;
+    user$: Observable<User> = this.userService.findUserById(1);
+    account$: Observable<Account[]> = this.accountService.findAccountsByUserId(1);
+    goal$: Observable<Goal[]> = this.goalService.findGoalsByUserId(1);
 
     private readonly _userVM: BehaviorSubject<UserViewModel> = new BehaviorSubject<UserViewModel>({} as UserViewModel);;
 
@@ -33,14 +33,10 @@ export class UserState {
         private goalService: GoalService,
         private accountService: AccountService,
     ) {
-        this.getPosts({ updateUser: true, updateAccounts: true, updateGoals: true });
+        this.getPosts();
     }
 
-    getPosts({ updateUser = false, updateAccounts = false, updateGoals = false }) {
-        updateUser && (this.user$ = this.userService.findUserById(1));
-        updateAccounts && (this.account$ = this.accountService.findAccountsByUserId(1));
-        updateGoals && (this.goal$ = this.goalService.findGoalsByUserId(1));
-
+    getPosts() {
         combineLatest([this.user$, this.account$, this.goal$]).pipe(
             map(([user, accounts, goals]) => new UserViewModel(user, accounts, goals))
         ).subscribe(userVM => {
