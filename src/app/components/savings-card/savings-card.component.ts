@@ -11,8 +11,7 @@ export class SavingsCardComponent {
 
   @Input() savings!: SavingsViewModel;
 
-  constructor(
-    private sidenav: SidenavService) { }
+  constructor(private sidenav: SidenavService) { }
 
   toggleRightSidenav(slot: string) {
     this.sidenav.toggle(slot);

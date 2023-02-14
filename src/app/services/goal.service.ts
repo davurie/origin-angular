@@ -16,6 +16,9 @@ export class GoalService {
   findGoalsByUserId = (id: number): Observable<Goal[]> =>
     this.http.get<Goal[]>(`http://localhost:3000/goals/?userId=${id}`);
 
+  markGoalAsComplete = (goal: Goal): Observable<void> =>
+    this.http.patch<void>(`http://localhost:3000/goals/${goal.id}`, { markedAsCompleted: true }, { headers: this.headers });
+
   createNewGoal = (goal: Goal): Observable<Goal> =>
     this.http.put<Goal>(`http://localhost:3000/goals`, { goal }, { headers: this.headers });
 }

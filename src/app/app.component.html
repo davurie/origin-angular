@@ -1,6 +1,5 @@
-<mat-sidenav-container [hasBackdrop]="true" scroll>
-
-  <div *ngIf="userVM$ | async as user">
+<div *ngIf="userState.userVM$ | async as user">
+  <mat-sidenav-container [hasBackdrop]="true" scroll>
     <div class="h-14 sticky shadow-sm"></div>
     <div class="savings--container">
       <h1 class="text-2xl font-bold mb-6 text-zinc-600">Savings</h1>
@@ -36,6 +35,5 @@
         </div>
       </div>
     </mat-sidenav>
-  </div>
-
-</mat-sidenav-container>
+  </mat-sidenav-container>
+</div>
