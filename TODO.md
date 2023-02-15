@@ -4,9 +4,9 @@
 
 - ~~Implement simple alerts for User feedback~~
 
-- Create the New Goal Journey
+- ~~Create the monthly objective side drawer~~
 
-- Create the monthly objective side drawer
+- Create the New Goal Journey
 
 - Unit Testing
 
