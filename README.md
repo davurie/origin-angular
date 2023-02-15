@@ -1,6 +1,8 @@
 # Origin Clone Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
+After watching the Demo video, I thought it would be fun to clone one of the pages that were shown. I chose the Goals tab because I like how it looks, and it sounded like a realistic challenge to accomplish in my free time. It probably took me around 10 hours to create.
+
+If you have any tips, questions, or you would like me to build something on top of this, do let me know!
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
@@ -17,7 +19,7 @@ Or visit the [Origin Clone App](https://origin-angular-davurie.vercel.app/) to s
 - Calculates a bunch of things by itself such as:
   - Monthly Budget to invest;
   - Money assigned to goals;
-  - Money left unnassigned;
+  - Money left unassigned;
   - Goal progress;
   - ... and more!
 
@@ -33,3 +35,5 @@ Or visit the [Origin Clone App](https://origin-angular-davurie.vercel.app/) to s
 ## Screenshot
 
 ![originangular](https://user-images.githubusercontent.com/36332661/219083345-f50963a7-57a2-4a0a-b3ca-8b6bb939840f.png)
+
+
