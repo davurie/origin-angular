@@ -51,7 +51,7 @@ export class SavingsCurrentSidenavComponent {
       });
   }
 
-  closeSidenav = () => this.sidenavService.close();
+  closeSidenav = () => this.sidenavService.toggle('');
 
   toggleAddAccountForm = () =>
     this.showAddAccountForm = !this.showAddAccountForm;

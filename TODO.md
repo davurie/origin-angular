@@ -6,12 +6,10 @@
 
 - ~~Create the monthly objective side drawer~~
 
-- Create the New Goal Journey
+- ~~Create the New Goal Journey~~
 
 - Unit Testing
 
 - e2e Testing
 
 - Give Tailwind a good cleanup
-
-- Rename dumdum redundant components kplsty david

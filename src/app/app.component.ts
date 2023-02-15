@@ -22,7 +22,7 @@ export class AppComponent implements AfterViewInit {
   ) { }
 
   getSidenavSlot = () => this.sidenavService.getSlot();
-  closeSidenav = () => this.sidenavService.close();
+  closeSidenav = () => this.sidenavService.toggle('');
 
   ngAfterViewInit() {
     this.sidenavService.setSidenav(this.sidenav);

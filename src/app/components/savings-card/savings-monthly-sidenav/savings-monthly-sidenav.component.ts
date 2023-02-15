@@ -12,6 +12,6 @@ export class SavingsMonthlySidenavComponent {
 
   constructor(private sidenavService: SidenavService) { }
 
-  closeSidenav = () => this.sidenavService.close();
+  closeSidenav = () => this.sidenavService.toggle('');
 
 }

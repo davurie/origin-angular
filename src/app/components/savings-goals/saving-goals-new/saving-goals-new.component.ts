@@ -39,5 +39,5 @@ export class SavingGoalsNewComponent {
         }
       });
 
-  close = () => this.sidenavService.close();
+  close = () => this.sidenavService.toggle('');
 }
