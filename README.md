@@ -4,6 +4,8 @@ After watching the Demo video, I thought it would be fun to clone one of the pag
 
 If you have any tips, questions, or you would like me to build something on top of this, do let me know!
 
+## How to use it!
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
 Or visit the [Origin Clone App](https://origin-angular-davurie.vercel.app/) to see it live!
