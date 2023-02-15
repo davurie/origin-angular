@@ -19,6 +19,9 @@ import { SavingsGoalsCompletedComponent } from './components/savings-goals/savin
 
 import { SidenavService } from './services/sidenav.service';
 import { SavingsCurrentSidenavComponent } from './components/savings-card/savings-current-sidenav/savings-current-sidenav.component';
+import { SavingsMonthlySidenavComponent } from './components/savings-card/savings-monthly-sidenav/savings-monthly-sidenav.component';
+import { SavingGoalsNewComponent } from './components/savings-goals/saving-goals-new/saving-goals-new.component';
+import { SelectOnFocusDirective } from './directives/select-on-focus.directive';
 
 @NgModule({
   declarations: [
@@ -30,6 +33,9 @@ import { SavingsCurrentSidenavComponent } from './components/savings-card/saving
     SavingsGoalsCardComponent,
     SavingsGoalsCompletedComponent,
     SavingsCurrentSidenavComponent,
+    SavingsMonthlySidenavComponent,
+    SavingGoalsNewComponent,
+    SelectOnFocusDirective,
   ],
   imports: [
     BrowserModule,

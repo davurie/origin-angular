@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { MatSnackBar } from '@angular/material/snack-bar';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 import { Subject } from 'rxjs';

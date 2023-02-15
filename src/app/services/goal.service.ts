@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs';
 import { Goal } from '../interfaces/user';
+import { GoalsViewModel } from '../models/goals.model';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,6 @@ export class GoalService {
   markGoalAsComplete = (goal: Goal): Observable<void> =>
     this.http.patch<void>(`http://localhost:3000/goals/${goal.id}`, { markedAsCompleted: true }, { headers: this.headers });
 
-  createNewGoal = (goal: Goal): Observable<Goal> =>
-    this.http.put<Goal>(`http://localhost:3000/goals`, { goal }, { headers: this.headers });
+  createNewGoal = (goal: GoalsViewModel): Observable<Goal> =>
+    this.http.post<Goal>(`http://localhost:3000/goals`, goal);
 }

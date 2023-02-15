@@ -2,23 +2,42 @@
   "users": [
     {
       "id": 1,
-      "password": "123",
       "fullname": "Jill",
       "savings": {
-        "lastIncome": 16102.05,
-        "investmentIncomeRatio": 0.2
+        "lastIncome": 12102.05,
+        "fixedExpenses": [
+          {
+            "name": "Mortgage",
+            "value": 4900
+          },
+          {
+            "name": "Groceries",
+            "value": 800
+          },
+          {
+            "name": "Gas",
+            "value": 400
+          },
+          {
+            "name": "House Bills",
+            "value": 1100
+          },
+          {
+            "name": "Fun Tax",
+            "value": 1500
+          }
+        ]
       }
     }
   ],
   "goals": [
     {
       "id": 1,
-      "goalTitle": "Buy a House",
+      "title": "Buy a House",
       "targetAmount": 80000,
       "savedAmount": 56190.48,
       "monthlyContribution": 1190.48,
-      "monthlyGoal": 1220.41,
-      "targetDate": "01/01/2024",
+      "targetDate": "01-01-2024",
       "onTrack": true,
       "markedAsCompleted": false,
       "goalReached": false,
@@ -26,12 +45,11 @@
     },
     {
       "id": 2,
-      "goalTitle": "Wedding",
+      "title": "Wedding",
       "targetAmount": 20000,
       "savedAmount": 20000,
       "monthlyContribution": 0,
-      "monthlyGoal": 0,
-      "targetDate": "04/01/2023",
+      "targetDate": "04-01-2023",
       "onTrack": true,
       "markedAsCompleted": false,
       "goalReached": true,
@@ -39,12 +57,11 @@
     },
     {
       "id": 3,
-      "goalTitle": "Office Expansion",
+      "title": "Office Expansion",
       "targetAmount": 150000,
       "savedAmount": 2700,
       "monthlyContribution": 1980.57,
-      "monthlyGoal": 2100,
-      "targetDate": "08/17/2023",
+      "targetDate": "08-17-2023",
       "completionDate": null,
       "onTrack": false,
       "markedAsCompleted": false,
@@ -53,13 +70,12 @@
     },
     {
       "id": 4,
-      "goalTitle": "Buy a new Car",
+      "title": "Buy a new Car",
       "targetAmount": 60000,
       "savedAmount": 60000,
       "monthlyContribution": 0,
-      "monthlyGoal": 0,
-      "targetDate": "05/25/2022",
-      "completionDate": "05/25/2022",
+      "targetDate": "05-25-2022",
+      "completionDate": "05-25-2022",
       "onTrack": true,
       "markedAsCompleted": true,
       "goalReached": true,
@@ -67,13 +83,12 @@
     },
     {
       "id": 5,
-      "goalTitle": "Trip",
+      "title": "Trip",
       "targetAmount": 24000,
       "savedAmount": 24000,
       "monthlyContribution": 0,
-      "monthlyGoal": 0,
-      "targetDate": "11/04/2021",
-      "completionDate": "11/04/2021",
+      "targetDate": "11-04-2021",
+      "completionDate": "11-04-2021",
       "onTrack": true,
       "markedAsCompleted": true,
       "goalReached": true,
@@ -81,13 +96,12 @@
     },
     {
       "id": 6,
-      "goalTitle": "Buy a Notebook",
+      "title": "Buy a Notebook",
       "targetAmount": 2500,
       "savedAmount": 2500,
       "monthlyContribution": 0,
-      "monthlyGoal": 0,
-      "targetDate": "04/02/2021",
-      "completionDate": "04/02/2021",
+      "targetDate": "04-02-2021",
+      "completionDate": "04-02-2021",
       "onTrack": true,
       "markedAsCompleted": true,
       "goalReached": true,

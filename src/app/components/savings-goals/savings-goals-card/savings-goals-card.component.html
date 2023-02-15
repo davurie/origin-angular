@@ -7,7 +7,7 @@
     </div>
     <div class="flex flex-grow justify-between items-center flex-row">
         <div class="flex-[1.5] mr-0 md:mr-20">
-            <span class="text-sm font-bold">{{goal.goalTitle}}</span>
+            <span class="text-sm font-bold">{{goal.title}}</span>
             <div>
                 <app-progress-bar [goalReached]="goal.goalReached" [targetAmount]="goal.targetAmount"
                     [savedAmount]="goal.savedAmount"></app-progress-bar>
@@ -55,7 +55,7 @@
         <div class="text-left flex-1 hidden lg:block mr-0 2xl:mr-20">
             <p class="text-oGray-400 text-sm tracking-wide">Monthly Contribution</p>
             <p class="text-oGray-600 text-xl font-bold tracking-wider"> {{goal.monthlyContribution | currency}}</p>
-            <ng-template [ngIf]="!goal.goalReached">
+            <ng-template [ngIf]="!goal.goalReached && goal.monthlyContribution > 0">
                 <p class="text-oGray-400 text-sm tracking-wide">
                     {{(goal.monthlyContribution / monthlyCapacity) | percent}} of monthly savings capacity
                 </p>

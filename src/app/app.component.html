@@ -12,7 +12,7 @@
     </div>
 
     <mat-sidenav #drawer class="w-full md:w-[30rem] rounded-l-xl" mode="over" position="end" disableClose
-      fixedInViewport autoFocus="false">
+      fixedInViewport>
 
       <div class="px-6 py-4 select-none">
         <div class="flex justify-end text-oGray-400">
@@ -30,7 +30,10 @@
             </app-savings-current-sidenav>
           </ng-container>
           <ng-container *ngIf="getSidenavSlot() === 'monthlyObjectiveValue'">
-            monthlyObjectiveValue
+            <app-savings-monthly-sidenav [savings]="user.savings"></app-savings-monthly-sidenav>
+          </ng-container>
+          <ng-container *ngIf="getSidenavSlot() === 'newGoal'">
+            <app-saving-goals-new></app-saving-goals-new>
           </ng-container>
         </div>
       </div>

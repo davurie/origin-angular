@@ -1,6 +1,5 @@
 export interface User {
     id: number;
-    password: string;
     fullname: string;
     savings: Savings;
 }
@@ -8,21 +7,19 @@ export interface User {
 export interface Savings {
     userId: number;
     lastIncome: number;
-    fixedExpenses?: FixedExpenses[];
-    investmentIncomeRatio: number; //remove after implementing fixed expenses
+    fixedExpenses: FixedExpense[];
 }
 
 export interface Goal {
-    id: number;
+    id?: number;
+    userId: number;
     savedAmount: number;
     monthlyContribution: number;
-    monthlyGoal: number;
     completionDate: string;
     onTrack: boolean;
     goalReached: boolean;
     markedAsCompleted: boolean;
-    userId: number;
-    goalTitle: string;
+    title: string;
     targetAmount: number;
     targetDate: string;
 }
@@ -36,7 +33,7 @@ export interface Account {
     userId: number;
 }
 
-export interface FixedExpenses {
+export interface FixedExpense {
     name: string;
     value: number;
 }
