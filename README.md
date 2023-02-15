@@ -13,6 +13,7 @@ Or visit the [Origin Clone App](https://origin-angular-davurie.vercel.app/) to s
 - JSON Server for testing HTTP calls;
 - Add new Accounts;
 - Add new Goals;
+- Mark Goals as completed;
 - Calculates a bunch of things by itself such as:
   - Monthly Budget to invest;
   - Money assigned to goals;
