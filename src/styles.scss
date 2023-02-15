@@ -68,7 +68,7 @@ body {
 }
 
 .complete--icon__yes {
-    @apply cursor-pointer rounded-full ml-2 bg-green-600/20 text-green-600 px-[0.32rem] py-[0.2rem] text-xs transition-colors hover:bg-green-400/20;
+    @apply cursor-pointer rounded-full ml-2 bg-oGreen/20 text-oGreen px-[0.32rem] py-[0.2rem] text-xs transition-colors hover:bg-green-400/20;
 }
 
 .complete--icon__no {
@@ -93,4 +93,30 @@ body {
 
 .select {
     @apply mt-2 mb-4 pl-2 h-10 rounded-md border-oGray-400/20 border-[1px] outline-none transition focus:border-oBlue-400/20 focus:ring-1 invalid:border-red-600;
+}
+
+.snackbar__danger {
+    --mdc-snackbar-container-color: #dc2626;
+    @apply max-w-max text-white border-red-500/60;
+  
+    .mdc-button__label {
+        @apply text-white;
+    }
+
+    .mat-mdc-snack-bar-label .mdc-snackbar__label {
+        @apply text-base;  
+    }
+}
+
+.snackbar__success {
+    --mdc-snackbar-container-color: #04bf5f;
+    @apply max-w-max text-white border-oGreen/60;
+  
+    .mdc-button__label {
+        @apply text-white;
+    }
+
+    .mat-mdc-snack-bar-label .mdc-snackbar__label {
+        @apply text-base;  
+    }
 }

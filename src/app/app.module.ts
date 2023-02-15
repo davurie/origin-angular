@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -36,6 +37,7 @@ import { SavingsCurrentSidenavComponent } from './components/savings-card/saving
     FontAwesomeModule,
     DragDropModule,
     MatSidenavModule,
+    MatSnackBarModule,
     HttpClientModule,
     FormsModule
   ],

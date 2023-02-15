@@ -1,11 +1,17 @@
 - ~~Componentize Progress Bar~~
 
-- grab cursor for goals
+- ~~grab cursor for goals~~
 
-- componentize the combo fields with currency
+- ~~Implement simple alerts for User feedback~~
 
-- Give Tailwind a good cleanup before shipping
+- Create the New Goal Journey
 
-- Rename dumb redundant components kplsty david
+- Create the monthly objective side drawer
 
-- mebbe refactor css into sass/scss MEBBE
+- Unit Testing
+
+- e2e Testing
+
+- Give Tailwind a good cleanup
+
+- Rename dumdum redundant components kplsty david
