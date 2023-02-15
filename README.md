@@ -1,6 +1,6 @@
 # Origin Clone Angular
 
-After watching the Demo video, I thought it would be fun to clone one of the pages that were shown. I chose the Goals tab because I like how it looks, and it sounded like a realistic challenge to accomplish in my free time. It took me around 10 hours to create.
+After watching the Demo video, I thought it would be fun to clone one of the pages that were shown. I chose the Goals tab because I like how it looks, and it sounded like a realistic challenge to accomplish in my free time. It took me around 10 hours to create, so there is a lot of rushed code!
 
 I had to imagine a few things, such as the Completed Goals area, the New Account form, the New Goal form, and the Monthly Budget side-drawer.
 
