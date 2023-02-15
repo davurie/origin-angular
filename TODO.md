@@ -12,4 +12,8 @@
 
 - e2e Testing
 
+- Dark Mode
+
+- Finish Goals CRUD
+
 - Give Tailwind a good cleanup
