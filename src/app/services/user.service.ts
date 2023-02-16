@@ -13,5 +13,5 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  findUserById = (id: number): Observable<User> => this.http.get<User>(`http://localhost:3000/users/${id}`);
+  findUserById = (id: number): Observable<User> => this.http.get<User>(`https://json-server-davurie.vercel.app/users/${id}`);
 }

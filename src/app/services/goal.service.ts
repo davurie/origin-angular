@@ -15,11 +15,11 @@ export class GoalService {
   constructor(private http: HttpClient) { }
 
   findGoalsByUserId = (id: number): Observable<Goal[]> =>
-    this.http.get<Goal[]>(`http://localhost:3000/goals/?userId=${id}`);
+    this.http.get<Goal[]>(`https://json-server-davurie.vercel.app/goals/?userId=${id}`);
 
   markGoalAsComplete = (goal: Goal): Observable<void> =>
-    this.http.patch<void>(`http://localhost:3000/goals/${goal.id}`, { markedAsCompleted: true }, { headers: this.headers });
+    this.http.patch<void>(`https://json-server-davurie.vercel.app/goals/${goal.id}`, { markedAsCompleted: true }, { headers: this.headers });
 
   createNewGoal = (goal: GoalsViewModel): Observable<Goal> =>
-    this.http.post<Goal>(`http://localhost:3000/goals`, goal);
+    this.http.post<Goal>(`https://json-server-davurie.vercel.app/goals`, goal);
 }
