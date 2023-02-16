@@ -1,27 +1,45 @@
-# OriginAngular
+# Origin Clone Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
+After watching the Demo video, I thought it would be fun to clone one of the pages that were shown. I chose the Goals tab because I like how it looks, and it sounded like a realistic challenge to accomplish in my free time. It took me around 10 hours to create, so there is a lot of rushed code!
 
-## Development server
+I had to imagine a few things, such as the Completed Goals area, the New Account form, the New Goal form, and the Monthly Budget side-drawer.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+If you have any tips, questions, or you would like me to build something on top of this, do let me know!
 
-## Code scaffolding
+> If there are any problems with branding/NDA for the design, please do let me know and I will make the appropriate changes!
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+*Hope you enjoy it as much as I did to create it!*
 
-## Build
+## How to use it!
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
-## Running unit tests
+## Features
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Mobile Friendly;
+- Drawers and User Feedback Alers;
+- JSON Server for testing HTTP calls;
+- Add new Accounts;
+- Add new Goals;
+- Mark Goals as completed;
+- Calculates a bunch of things by itself such as:
+  - Monthly Budget to invest;
+  - Money assigned to goals;
+  - Money left unassigned;
+  - Goal progress;
+  - ... and more!
 
-## Running end-to-end tests
+## Things I would do before giving this prototype the 'finished' stamp:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Unit Testing
+- e2e Testing
+- Dark Mode
+- Finish Goals CRUD
+- Refactor the forms into Angular Reactive Forms, for better control and validation states.
+- Give TailwindCSS a good cleanup
 
-## Further help
+## Screenshot
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![originangular](https://user-images.githubusercontent.com/36332661/219083345-f50963a7-57a2-4a0a-b3ca-8b6bb939840f.png)
+
+
