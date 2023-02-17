@@ -14,8 +14,6 @@ If you have any tips, questions, or you would like me to build something on top 
 
 Run `ng serve` and `npm, run json-server`. Navigate to `http://localhost:4200/`.
 
-Or visit the [Origin Clone App](https://origin-angular-davurie.vercel.app/) to see it live!
-
 ## Features
 
 - Mobile Friendly;
